@@ -1,13 +1,57 @@
+@import "~bootstrap/scss/bootstrap";
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+//flags
+.home-flags {
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  .flags-bg {
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+  }
+  .flags-container {
+    position: relative;
+  }
+}
+.slider-wrapper {
+  width: 2800px;
+  height: 550px;
+  position: relative;
+  @media (max-width: 768px) {
+    height: 250px;
+    transform: translateY(-20%) scale(0.45);
+  }
+  .img {
+    position: absolute;
+    -o-object-position: center center;
+    object-position: center center;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px 0px;
+    -webkit-animation: flagsAnimate 300s linear infinite;
+    -moz-animation: flagsAnimate 300s linear infinite;
+    -o-animation: flagsAnimate 300s linear infinite;
+    animation: flagsAnimate 300s linear infinite;
+  }
+}
+
+@keyframes flagsAnimate {
+  0% {
+    transform: translateX(1600px);
+  }
+  to {
+    transform: translateX(-1600px);
+  }
 }
