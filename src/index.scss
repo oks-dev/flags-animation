@@ -18,8 +18,8 @@ code {
   .flags-bg {
     white-space: nowrap;
     overflow: hidden;
-    pointer-events: none;
-    user-select: none;
+    // pointer-events: none;
+    // user-select: none;
   }
   .flags-container {
     position: relative;
@@ -34,16 +34,19 @@ code {
     transform: translateY(-20%) scale(0.45);
   }
   .img {
+    object-fit: cover;
     position: absolute;
     -o-object-position: center center;
     object-position: center center;
-    pointer-events: none;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px 0px;
     -webkit-animation: flagsAnimate 300s linear infinite;
     -moz-animation: flagsAnimate 300s linear infinite;
     -o-animation: flagsAnimate 300s linear infinite;
     animation: flagsAnimate 300s linear infinite;
+    // &:hover {
+    //   cursor: pointer;
+    // }
   }
 }
 
@@ -54,4 +57,9 @@ code {
   to {
     transform: translateX(-1600px);
   }
+}
+
+//alert
+.alert-wrap {
+  height: 50px;
 }
