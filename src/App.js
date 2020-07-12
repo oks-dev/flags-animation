@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React
+  //  { useState } 
+  from 'react';
 
 const flags = [
   {
@@ -228,17 +230,17 @@ const flags = [
 ]
 
 function App() {
-  const [selected, setSelected] = useState('')
-  const [show, setShow] = useState(false)
+  // const [selected, setSelected] = useState('')
+  // const [show, setShow] = useState(false)
 
-  const handleClick = name => {
-    setSelected(name)
-    setShow(true)
-  }
+  // const handleClick = name => {
+  //   setSelected(name)
+  //   setShow(true)
+  // }
 
-  const handleClose = () => {
-    setShow(false)
-  }
+  // const handleClose = () => {
+  //   setShow(false)
+  // }
 
   return (
     <div className='container-fluid pt-4 content-wrap'>
@@ -272,7 +274,7 @@ function App() {
                       }
                     }
                     alt={flag.alt}
-                    onClick={() => handleClick(flag.alt)}
+                  // onClick={() => handleClick(flag.alt)}
                   />
                 )
               })}
